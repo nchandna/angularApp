@@ -1,0 +1,89 @@
+<h4 style="background: #0664c74a;font-size: 24px;text-align: center;">Customer Register Screen</h4>
+<div class="wrapper wrapper-full-page">
+    <div class="full-page register-page" filter-color="black">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-sm-11">
+                    <div class="card card-signup">
+                        <h2 class="card-title text-center">Register</h2>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="NewEVARegistration" [formGroup]="registerForm" >
+                                    <div class="card-content">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">face</i>
+                                            </span>
+                                            <input type="text" name="firstName" class="form-control inputfieldform"
+                                                   formControlName="userName" placeholder="Enter First Name...">
+                                            <div *ngIf ="userNameReqFlag" style="color: red">
+                                               UserName is required.
+                                            </div>
+                                            <div *ngIf ="userNamepatFlag" style="color: red">
+                                                Only Alphabets are allowed.
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">phone</i>
+                                            </span>
+                                            <input type="text" name="contactNumber" class="form-control inputfieldform"
+                                                   formControlName="contactNo" placeholder="Enter Contact Number...">
+                                            <div *ngIf ="contactReqFlag" style="color: red">
+                                                Contact number is required.
+                                            </div>
+                                            <div *ngIf ="contactpatFlag" style="color: red">
+                                                Only numerals are allowed.
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group" style="margin-top: 20px;margin-bottom: -30px;">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">camera</i>
+                                            </span>
+                                            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+
+                                                <div class="fileinput-new thumbnail">
+                                                    <img src="" name="userImage">
+                                                </div>
+                                             <div class="fileinput-preview fileinput-exists thumbnail"></div>
+
+                                                <span class="btn btn-rose btn-round btn-file">
+                                                        <span class="fileinput-new">Capture image</span>
+                                                        <span class="fileinput-exists">Change</span>
+                                                    <input type="file" capture="camera" accept="image/*"
+                                           (change)="getBase64Url(this);" formControlName="inputImage">
+                                                    </span>
+
+                                                <a id="removeBtn" href="#pablo" class="btn btn-danger btn-round fileinput-exists"
+                                                   data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                                                <div *ngIf ="imageFlag" style="color: red">
+                                                    Please upload the image.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- If you want to add a checkbox to this form, uncomment this code -->
+                                    <div class="checkbox" style="margin-left: 5px;">
+                                        <label>
+                                            <input type="checkbox" name="optionsCheckboxes" formControlName="privacy"
+                                                   checked > <span style="color: black; padding-left: 10px;">I agree to the
+                                            terms and conditions.</span>
+                                        </label>
+                                        <div *ngIf ="privacyFlag" style="color: red">
+                                            Please agree to our terms
+                                        </div>
+                                    </div>
+                                    <div class="footer text-center">
+                                        <a  class="btn btn-primary btn-round" (click)="registerCustomer()">Submit</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

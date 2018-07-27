@@ -1,0 +1,32 @@
+.register-page .card-signup {
+width: 65%;
+ margin-left: 20%;
+}
+
+.inputfieldform {
+ margin: 0px 15% 10px 10px!important;
+ padding-bottom: 0!important;
+ background: #00bcd426!important;
+ border-radius: 10px!important;
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+ text-align: center!important;
+}
+
+.register-page .card-signup {
+ border-radius: 6px;
+ box-shadow: 0 0 24px 0px rgb(45, 5, 5), 0 0px 24px 0px rgba(0, 0, 0, 0.3), 0 0px 24px 0px rgba(0, 0, 0, 0.1);
+ margin-bottom: 100px;
+ padding: 40px 0px;
+}
+
+.mat-button.btn, .mat-raised-button.btn, .btn {
+
+ margin: -5px 0px 30px 10px;
+
+}
+.register-page .container {
+ position: relative;
+ z-index: 3;
+ background: #eee;
+}
